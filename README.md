@@ -1,12 +1,9 @@
 # My Portfolio website
 
-Intending to create a web application-like portfolio website that comes with Next.js and Prisma
+A Blog or something that is typically called as portfolio website. I'm thinking of a casual SSR starter kit with Next.js and Prisma to use.  
+Python may be included in the futher tech stack as Headless CMS will be attached as the admin panel.  
    
   
-## TODO
-  
-- styled-jsx doesn't apply to Material-UI-Icons since Material-UI-Icons doesn't use its styling as pure css className. However, using styled-components instead arises client-side rendering of UI components.  
-
 ## Run on dev mode
   
 1. Clone project    

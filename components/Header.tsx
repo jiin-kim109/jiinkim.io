@@ -5,6 +5,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import styled from 'styled-components';
 
+//box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0, 0.24)
+
 const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
