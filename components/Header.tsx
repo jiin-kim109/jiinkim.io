@@ -11,38 +11,18 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
-  background-color: var(--primary-color);
-  color: white;
+  padding: 10px 0 0 50px;
+  background-color: 'white';
 `
 
 const HeaderLeft = styled.div`
   flex: 0.3;
   display: flex;
   align-items: center;
-  margin-left: 20px;
 
-  .MuiSvgIcon-root {
-    margin-left: auto;
-    margin-right: 20px;   
-  }
-`
-
-const HeaderSearch = styled.div`
-  flex: 0.4;
-  background-color: #421f44;
-  text-align: center;
-  display: flex;
-  padding: 0 50px;
-  color: gray;
-  border: 1px gray solid;
-  border-radius: 6px;
-
-  input {
-    background-color: transparent;
-    border: none;
-    text-align: center;
-    min-width: 35vw;   
+  h3 {
+    margin-left: 10px;
+    font-weight: 700;
   }
 `
 
@@ -61,14 +41,9 @@ const Header = () => (
   <HeaderContainer>
 
     <HeaderLeft>
-      <Avatar className="avatar" alt={"ref"} src={""} />
-      <AccessTimeIcon />
+      <Avatar>J</Avatar>
+      <h3>Jiin Kim</h3>
     </HeaderLeft>
-
-    <HeaderSearch>
-      <SearchIcon />
-      <input placeholder="Search Anything" />
-    </HeaderSearch>
 
     <HeaderRight>
       <HelpOutlineIcon />
