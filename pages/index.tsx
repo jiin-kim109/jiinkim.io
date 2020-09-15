@@ -98,7 +98,6 @@ export const getStaticProps: GetStaticProps = async () => {
       channels,
     },
   }
-}
-*/
+}*/
 
 export default withLayout(Index);

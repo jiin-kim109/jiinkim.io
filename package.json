@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@prisma/cli": "^2.6.2",
+    "@sls-next/serverless-component": "^1.17.0-alpha.12",
     "@types/material-ui": "^0.21.8",
     "@types/styled-components": "^5.1.3"
   }
