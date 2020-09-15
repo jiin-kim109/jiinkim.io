@@ -1,11 +1,10 @@
-# My Portfolio website
+# JiinKim.io
 
-A Blog or something that is typically called as portfolio website. I'm thinking of a casual SSR starter kit with Next.js and Prisma to use.  
-Python may be included in the futher tech stack as Headless CMS will be attached as the admin panel.  
+A Blog or something called a portfolio website. I'm thinking of a casual SSR starter kit with Next.js and Prisma to make my own blogging solution.  
    
 ## Feature
 
-Next.js static pages hosted on S3 will be called by each endpoint to AWS Lambda using the Serverless framework as well as GraphQL from Prisma. PostgresQL will be on the AWS RDS.  
+Next.js static pages hosted on S3 that is called by each endpoint to AWS Lambda@Edge using the Serverless framework. GraphQL to Prisma which is the ORM to PostgresQL on AWS RDS.  
 
 <img src="https://i.stack.imgur.com/uXgjX.png">
   
