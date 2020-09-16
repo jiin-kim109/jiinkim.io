@@ -1,6 +1,10 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// npx prisma migrate save --experimental
+// npx prisma migrate up --experimental  
+// npx prisma generate
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -10,9 +14,26 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Movie {
-  id           Int    @default(autoincrement()) @id
-  director     String
-  movieName    String
-  yearReleased Int
+model Post {
+  id Int @id @default(autoincrement())
+  createAt DateTime @default(now())
+  title String
+  summary String
+  keywords String[]
+  content String
+}
+
+model Project {
+  id      Int    @id @default(autoincrement())
+  closedAt DateTime
+  post    Post   @relation(fields: [postId], references: [id])
+  postId  Int    // relation scalar field (used in the `@relation` attribute above)
+}
+
+model News {
+  id Int @id @default(autoincrement())
+  createAt DateTime @default(now())
+  title String
+  summary String?
+  url String
 }

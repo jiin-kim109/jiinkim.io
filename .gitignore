@@ -1,5 +1,8 @@
 node_modules
 .next
+prisma
+prisma/**
+.env
 **/.env
 .serverless
 .serverless_nextjs
