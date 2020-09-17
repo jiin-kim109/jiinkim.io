@@ -17,23 +17,8 @@ generator client {
 model Post {
   id Int @id @default(autoincrement())
   createAt DateTime @default(now())
+  category String
   title String
   summary String
-  keywords String[]
   content String
-}
-
-model Project {
-  id      Int    @id @default(autoincrement())
-  closedAt DateTime
-  post    Post   @relation(fields: [postId], references: [id])
-  postId  Int    // relation scalar field (used in the `@relation` attribute above)
-}
-
-model News {
-  id Int @id @default(autoincrement())
-  createAt DateTime @default(now())
-  title String
-  summary String?
-  url String
 }

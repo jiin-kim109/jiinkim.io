@@ -12,7 +12,8 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 0 50px;
-  background-color: 'white';
+  background-color: black;
+  color: white;
 `
 
 const HeaderLeft = styled.div`
@@ -42,7 +43,7 @@ const Header = () => (
 
     <HeaderLeft>
       <Avatar>J</Avatar>
-      <h3>Jiin Kim</h3>
+      <h3>Jiin Kim's Dev Blog</h3>
     </HeaderLeft>
 
     <HeaderRight>

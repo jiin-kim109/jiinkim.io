@@ -5,25 +5,32 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     const prisma = new PrismaClient({log: ["query"]});
 
     try {
+        var key = req.query.key as string;
+
         if(req.method === 'GET'){
-            const news = await prisma.news.findMany();
-            res.status(200).json({news});  
+            var posts;
+            if(parseInt(key))
+                posts = await prisma.post.findOne({ where: { id: key }}); 
+            const posts = await prisma.post.findMany({ where: { category: category }}); 
+            res.status(200).json({posts});  
         }
         else if (req.method === 'POST') {
-            const { news: data } = req.body;
-            const result = await prisma.news.create({
+            const { post: data } = req.body;
+            const post = await prisma.post.create({
                 data: {
-                    title: data.title,
+                    category: category,
                     summary: data.summary,
-                    url: data.url
+                    title: data.title,
+                    content: data.content
                 }
             });
-            res.status(201).json({ result });
+            res.status(201).json({ post });
         }
         else 
             throw "Invalid Request Method";
 
     } catch (e) {
+        console.log(e);
         res.status(500).json({ error: `Request Failed`});
     } finally {
       await prisma.$disconnect();

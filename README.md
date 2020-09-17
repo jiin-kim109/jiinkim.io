@@ -1,12 +1,13 @@
 # JiinKim.io
 
-A Blog or something called a portfolio website. I'm thinking of a casual SSR starter kit with Next.js and Prisma to make my own blogging solution.  
+A Blog or something to be called a portfolio website. A causal SSR kit of Next.js, Prisma and PostgreSQL. 
    
 ## Feature
 
-Next.js static pages hosted on S3 that is called by each endpoint to AWS Lambda@Edge using the Serverless framework. GraphQL to Prisma which is the ORM to PostgresQL on AWS RDS.  
-
-<img src="https://i.stack.imgur.com/uXgjX.png">
+The application and Prisma sit on EC2. I'm using my own Headless-CMS with AWS RDS.  
+  
+Anyone who's interested in SSR and Next.js, I strongly recommend the follwoing Youtube Tutorial.  
+https://www.youtube.com/watch?v=Bqacj0iOL68&t=1851s  
   
 ## Run on dev mode
   

@@ -9,18 +9,6 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
             const posts = await prisma.post.findMany();
             res.status(200).json({posts});  
         }
-        else if (req.method === 'POST') {
-            const { post: data } = req.body;
-            const post = await prisma.post.create({
-                data: {
-                    summary: data.summary,
-                    keywords: data.keywords,
-                    title: data.title,
-                    content: data.content
-                }
-            });
-            res.status(201).json({ post });
-        }
         else 
             throw "Invalid Request Method";
 

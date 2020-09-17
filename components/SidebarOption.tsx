@@ -1,5 +1,6 @@
 import { SvgIconProps } from '@material-ui/core';
 import styled from "styled-components";
+import { NextPage } from 'next';
 
 const Container = styled.div`
     display: flex;
